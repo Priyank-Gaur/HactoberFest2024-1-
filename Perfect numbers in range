@@ -1,0 +1,14 @@
+#A perfect number is a positive integer that is equal to the sum of its proper divisors (excluding itself).
+
+
+a=int(input())
+b=int(input())
+def print_perfect_numbers(a,b):
+    for i in range(a,b+1):
+        sum=0
+        for j in range(1,i):
+            if i%j==0:
+                sum=sum+j
+        if sum==i:
+            print(i,end=" ")
+print_perfect_numbers(a,b)
